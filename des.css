@@ -95,7 +95,7 @@ nav {
 
 .hamburger-menu {
   position: relative;
-  display: inline-block;
+  display: none; /* Hide by default, show on mobile */
 }
 
 .hamburger-icon {
@@ -155,18 +155,6 @@ nav {
   transform: rotate(-45deg) translate(10px, -5px);
 }
 
-.hamburger-icon span:first-child {
-  transform: none;
-}
-
-.hamburger-icon span:first-child {
-  opacity: 1;
-}
-
-.hamburger-icon span:first-child {
-  transform: none;
-}
-
 /* SECTIONS */
 
 section {
@@ -179,7 +167,7 @@ section {
 }
 
 .section-container {
-  display:flex ;
+  display: flex;
   justify-content: center;
   align-items: center;
   gap: 4rem;
@@ -356,7 +344,7 @@ section {
 
 .section__pic-container {
   height: 400px;
-  width:400px;
+  width: 400px;
   margin: auto 0;
 }
 
@@ -481,4 +469,21 @@ footer .nav-links a {
 
 footer p {
   color: #fff9;
+}
+
+/* MEDIA QUERIES FOR MOBILE */
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    padding: 1rem 2%;
+  }
+
+  .nav-links {
+    display: none; /* Hide desktop links */
+  }
+
+  .hamburger-menu {
+    display: inline-block; /* Show hamburger menu */
+  }
 }
