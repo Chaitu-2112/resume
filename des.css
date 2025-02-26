@@ -359,49 +359,6 @@ section {
   width:400px;
   margin: auto 0;
 }
-.text-container {
-  max-width: 60%; /* Shorter in length, wider */
-  margin: 0 auto; /* Centers the text */
-  padding: 2rem;
-  background-color: #f9f9f9;
-  border-radius: 1rem;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  font-size: 1.3rem;
-  line-height: 1.8;
-  color: #333;
-}
-
-/* 🔹 Tablets (1024px and below) */
-@media (max-width: 1024px) {
-  .text-container {
-    max-width: 70%; /* Makes it wider */
-    font-size: 1.2rem;
-    padding: 1.8rem;
-  }
-}
-
-/* 🔹 Smaller Tablets & Large Phones (768px and below) */
-@media (max-width: 768px) {
-  .text-container {
-    max-width: 80%; /* Increases width */
-    font-size: 1.1rem;
-    padding: 1.5rem;
-    line-height: 1.6; /* Adjusts spacing for better fit */
-  }
-}
-
-/* 🔹 Mobile Phones (480px and below) */
-@media (max-width: 480px) {
-  .text-container {
-    max-width: 90%; /* Widens it further */
-    font-size: 1rem;
-    padding: 1.2rem;
-    line-height: 1.5; /* Reduces line height slightly */
-  }
-}
-
-
 
 /* EXPERIENCE SECTION */
 
@@ -439,97 +396,6 @@ article {
 article .icon {
   cursor: default;
 }
-#experience {
-  padding: 8rem 5%;
-  background-color: white;
-  text-align: center;
-}
-
-/* 🔹 Adjusts subtitle size for better readability */
-.experience-sub-title {
-  color: rgb(85, 85, 85);
-  font-weight: 600;
-  font-size: 1.75rem;
-  margin-bottom: 2rem;
-}
-
-/* 🔹 Spacing adjustments for smaller screens */
-.experience-details-container {
-  margin-top: 4rem;
-}
-
-/* 🔹 Flexbox ensures a clean layout */
-.article-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2.5rem;
-  justify-content: space-around;
-  margin-top: 2rem;
-}
-
-/* 🔹 Aligns items properly */
-article {
-  display: flex;
-  gap: 0.5rem;
-  align-items: center;
-}
-
-/* 🔹 Icons remain clickable but not selectable */
-article .icon {
-  cursor: default;
-}
-
-/* 🔹 Tablets (1024px and below) */
-@media (max-width: 1024px) {
-  .experience-sub-title {
-    font-size: 1.5rem;
-  }
-  .article-container {
-    gap: 2rem;
-    justify-content: center;
-  }
-  article {
-    flex-direction: row;
-    text-align: left;
-  }
-}
-
-/* 🔹 Large Phones & Smaller Tablets (768px and below) */
-@media (max-width: 768px) {
-  #experience {
-    padding: 5rem 3%;
-  }
-  .experience-sub-title {
-    font-size: 1.4rem;
-  }
-  .article-container {
-    flex-direction: column;
-    align-items: center;
-  }
-  article {
-    flex-direction: column;
-    text-align: center;
-  }
-}
-
-/* 🔹 Mobile Phones (480px and below) */
-@media (max-width: 480px) {
-  #experience {
-    padding: 4rem 2%;
-  }
-  .experience-sub-title {
-    font-size: 1.3rem;
-    margin-bottom: 1.5rem;
-  }
-  .article-container {
-    gap: 1.5rem;
-  }
-  article {
-    flex-direction: column;
-    text-align: center;
-  }
-}
-
 
 /* PROJECTS SECTION */
 
@@ -558,38 +424,6 @@ article .icon {
 .project-btn {
   font-size: 0.9rem;
   padding: 0.8rem 1.5rem;
-}
-@media (max-width: 768px) {
-  #projects {
-    padding: 3rem 5%;
-  }
-
-  .article-container {
-    flex-direction: column; /* Stack projects vertically */
-    align-items: center;
-  }
-
-  .color-container {
-    width: 100vw; /* Full screen width */
-    padding: 2rem;
-    background-size: cover;
-  }
-
-  .project-img {
-    width: 90%; /* Adjust image size */
-    max-height: 18rem;
-    object-fit: cover;
-  }
-
-  .project-title {
-    font-size: 1.8rem;
-    text-align: center;
-  }
-
-  .project-btn {
-    font-size: 1rem;
-    padding: 0.8rem 2rem;
-  }
 }
 
 /* CONTACT */
@@ -625,43 +459,7 @@ article .icon {
   width: 25px;
   height: 25px;
 }
-/* 🔹 Mobile Responsiveness */
-@media (max-width: 768px) {
-  #contact {
-    padding: 4rem 5%;
-    width: 100vw; /* Full width */
-  }
 
-  /* Stack contact items and make bg wider */
-  .contact-info-upper-container {
-    flex-direction: column;
-    gap: 1.5rem;
-    align-items: center;
-    width: 100%;
-  }
-
-  /* Expand contact box width */
-  .contact-info-container {
-    width: 90%; /* Makes it nearly full width on mobile */
-    justify-content: center;
-    text-align: center;
-    padding: 1.5rem;
-  }
-
-  /* Adjust icon size */
-  .contact-icon {
-    width: 30px;
-    height: 30px;
-  }
-
-  /* Make buttons fully responsive */
-  .contact-button {
-    width: auto;
-    min-width: 140px;
-    padding: 1rem 2rem;
-    font-size: 1rem;
-  }
-}
 /* FOOTER SECTION */
 
 footer {
@@ -683,4 +481,169 @@ footer .nav-links a {
 
 footer p {
   color: #fff9;
+}
+/* 🌍 GENERAL RESPONSIVENESS */
+
+/* Large Screens (Desktops & Laptops) */
+@media (max-width: 1200px) {
+  section {
+    margin: 0 5rem;
+  }
+}
+
+/* Medium Screens (Tablets & Small Laptops) */
+@media (max-width: 1024px) {
+  section {
+    margin: 0 3rem;
+  }
+
+  .nav-links {
+    gap: 1.5rem;
+  }
+
+  .section-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .about-containers {
+    flex-direction: column;
+  }
+}
+
+/* Small Screens (Tablets & Large Phones) */
+@media (max-width: 768px) {
+  nav {
+    padding: 1.2rem 4%;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  #hamburger-nav {
+    display: block;
+  }
+
+  section {
+    margin: 0 2rem;
+  }
+
+  .section__pic-container {
+    width: 300px;
+    height: 300px;
+  }
+
+  .section__pic-container2 {
+    width: 300px;
+    height: 300px;
+  }
+
+  .btn-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-img {
+    height: 200px;
+  }
+
+  .contact-info-upper-container {
+    flex-direction: column;
+  }
+}
+
+/* Extra Small Screens (Mobile Phones) */
+@media (max-width: 480px) {
+  nav {
+    padding: 1rem 3%;
+  }
+
+  section {
+    margin: 0 1rem;
+    padding-top: 3vh;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .section__pic-container,
+  .section__pic-container2 {
+    width: 250px;
+    height: 250px;
+  }
+
+  .section-container {
+    gap: 1.5rem;
+  }
+
+  .btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .about-containers {
+    gap: 1.5rem;
+  }
+
+  .details-container {
+    padding: 1.5rem;
+  }
+
+  .article-container {
+    gap: 1.5rem;
+  }
+
+  .contact-info-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  footer {
+    padding: 2rem 2%;
+  }
+}
+/* Footer Adjustments for Small Screens */
+@media (max-width: 768px) {
+  footer {
+    padding: 3rem 3%;
+    text-align: center;
+  }
+
+  footer nav {
+    margin-bottom: 1.5rem;
+  }
+
+  footer .nav-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  footer .nav-links a {
+    font-size: 1rem;
+    padding: 8px 15px;
+  }
+
+  footer p {
+    font-size: 0.9rem;
+    color: #ffffffcc; /* Light gray for better visibility */
+  }
+}
+
+/* Footer for Extra Small Screens (Mobile Phones) */
+@media (max-width: 480px) {
+  footer {
+    padding: 2rem 2%;
+  }
+
+  footer .nav-links a {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+  }
+
+  footer p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
 }
