@@ -95,7 +95,7 @@ nav {
 
 .hamburger-menu {
   position: relative;
-  display: none; /* Hide by default, show on mobile */
+  display: inline-block;
 }
 
 .hamburger-icon {
@@ -155,6 +155,18 @@ nav {
   transform: rotate(-45deg) translate(10px, -5px);
 }
 
+.hamburger-icon span:first-child {
+  transform: none;
+}
+
+.hamburger-icon span:first-child {
+  opacity: 1;
+}
+
+.hamburger-icon span:first-child {
+  transform: none;
+}
+
 /* SECTIONS */
 
 section {
@@ -167,7 +179,7 @@ section {
 }
 
 .section-container {
-  display: flex;
+  display:flex ;
   justify-content: center;
   align-items: center;
   gap: 4rem;
@@ -344,9 +356,52 @@ section {
 
 .section__pic-container {
   height: 400px;
-  width: 400px;
+  width:400px;
   margin: auto 0;
 }
+.text-container {
+  max-width: 60%; /* Shorter in length, wider */
+  margin: 0 auto; /* Centers the text */
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 1rem;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-size: 1.3rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+/* 🔹 Tablets (1024px and below) */
+@media (max-width: 1024px) {
+  .text-container {
+    max-width: 70%; /* Makes it wider */
+    font-size: 1.2rem;
+    padding: 1.8rem;
+  }
+}
+
+/* 🔹 Smaller Tablets & Large Phones (768px and below) */
+@media (max-width: 768px) {
+  .text-container {
+    max-width: 80%; /* Increases width */
+    font-size: 1.1rem;
+    padding: 1.5rem;
+    line-height: 1.6; /* Adjusts spacing for better fit */
+  }
+}
+
+/* 🔹 Mobile Phones (480px and below) */
+@media (max-width: 480px) {
+  .text-container {
+    max-width: 90%; /* Widens it further */
+    font-size: 1rem;
+    padding: 1.2rem;
+    line-height: 1.5; /* Reduces line height slightly */
+  }
+}
+
+
 
 /* EXPERIENCE SECTION */
 
@@ -384,6 +439,97 @@ article {
 article .icon {
   cursor: default;
 }
+#experience {
+  padding: 8rem 5%;
+  background-color: white;
+  text-align: center;
+}
+
+/* 🔹 Adjusts subtitle size for better readability */
+.experience-sub-title {
+  color: rgb(85, 85, 85);
+  font-weight: 600;
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+/* 🔹 Spacing adjustments for smaller screens */
+.experience-details-container {
+  margin-top: 4rem;
+}
+
+/* 🔹 Flexbox ensures a clean layout */
+.article-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  justify-content: space-around;
+  margin-top: 2rem;
+}
+
+/* 🔹 Aligns items properly */
+article {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+/* 🔹 Icons remain clickable but not selectable */
+article .icon {
+  cursor: default;
+}
+
+/* 🔹 Tablets (1024px and below) */
+@media (max-width: 1024px) {
+  .experience-sub-title {
+    font-size: 1.5rem;
+  }
+  .article-container {
+    gap: 2rem;
+    justify-content: center;
+  }
+  article {
+    flex-direction: row;
+    text-align: left;
+  }
+}
+
+/* 🔹 Large Phones & Smaller Tablets (768px and below) */
+@media (max-width: 768px) {
+  #experience {
+    padding: 5rem 3%;
+  }
+  .experience-sub-title {
+    font-size: 1.4rem;
+  }
+  .article-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  article {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* 🔹 Mobile Phones (480px and below) */
+@media (max-width: 480px) {
+  #experience {
+    padding: 4rem 2%;
+  }
+  .experience-sub-title {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+  }
+  .article-container {
+    gap: 1.5rem;
+  }
+  article {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
 
 /* PROJECTS SECTION */
 
@@ -412,6 +558,38 @@ article .icon {
 .project-btn {
   font-size: 0.9rem;
   padding: 0.8rem 1.5rem;
+}
+@media (max-width: 768px) {
+  #projects {
+    padding: 3rem 5%;
+  }
+
+  .article-container {
+    flex-direction: column; /* Stack projects vertically */
+    align-items: center;
+  }
+
+  .color-container {
+    width: 100vw; /* Full screen width */
+    padding: 2rem;
+    background-size: cover;
+  }
+
+  .project-img {
+    width: 90%; /* Adjust image size */
+    max-height: 18rem;
+    object-fit: cover;
+  }
+
+  .project-title {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .project-btn {
+    font-size: 1rem;
+    padding: 0.8rem 2rem;
+  }
 }
 
 /* CONTACT */
@@ -447,7 +625,43 @@ article .icon {
   width: 25px;
   height: 25px;
 }
+/* 🔹 Mobile Responsiveness */
+@media (max-width: 768px) {
+  #contact {
+    padding: 4rem 5%;
+    width: 100vw; /* Full width */
+  }
 
+  /* Stack contact items and make bg wider */
+  .contact-info-upper-container {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    width: 100%;
+  }
+
+  /* Expand contact box width */
+  .contact-info-container {
+    width: 90%; /* Makes it nearly full width on mobile */
+    justify-content: center;
+    text-align: center;
+    padding: 1.5rem;
+  }
+
+  /* Adjust icon size */
+  .contact-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  /* Make buttons fully responsive */
+  .contact-button {
+    width: auto;
+    min-width: 140px;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+}
 /* FOOTER SECTION */
 
 footer {
@@ -469,21 +683,4 @@ footer .nav-links a {
 
 footer p {
   color: #fff9;
-}
-
-/* MEDIA QUERIES FOR MOBILE */
-
-@media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    padding: 1rem 2%;
-  }
-
-  .nav-links {
-    display: none; /* Hide desktop links */
-  }
-
-  .hamburger-menu {
-    display: inline-block; /* Show hamburger menu */
-  }
 }
